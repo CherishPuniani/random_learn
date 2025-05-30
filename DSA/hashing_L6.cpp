@@ -1,6 +1,6 @@
-#include <iostream>
-#include <unordered_map>
-#include <vector>
+#include<bits/stdc++.h>
+using namespace std;
+
 using namespace std;
 
 void print_freq(const vector<int>& v) {
@@ -17,6 +17,7 @@ void print_freq(const vector<int>& v) {
 int main() {
     int t;
     cin >> t;
+
 
     vector<int> v(t);
     for (int i = 0; i < t; i++) {
