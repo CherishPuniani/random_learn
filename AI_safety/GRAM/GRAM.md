@@ -2,6 +2,8 @@
 
 GRAM is essentially an on/off switch to control what a model knows.
 
+Reference blog: [ae.studio/research/modular-pretraining-access-control](https://ae.studio/research/modular-pretraining-access-control)
+
 ## Existing Defenses
 
 > "AI companies already manage this risk with a mix of defenses"
@@ -134,10 +136,13 @@ Basically, in partially labelled data, GRAM is able to isolate the relevant modu
   - Why is instruction tuning with GRAM different from normal methods?
     ![1786353106337](image/GRAM/1786353106337.png)
   - How is it done with LoRA then?
+
     - **Stage 1: Base Instruction Tuning (General SFT)**
 
       - The clean base model is instruction-tuned on general, non-sensitive datasets (e.g., ShareGPT, UltraFeedback, coding, general reasoning).
-      *  This teaches the core model **$W_0$** how to format responses, adopt an assistant persona, and follow general user prompts.
+
+      * This teaches the core model **$W_0$** how to format responses, adopt an assistant persona, and follow general user prompts.
+
     * **Stage 2: Domain-Isolated LoRA Tuning**
 
       * The instruction-tuned backbone **$W_0$** is  **completely frozen** .
